@@ -2,6 +2,8 @@
 const amount = document.getElementById("amount");
 const currency = document.getElementById("currency");
 const form = document.querySelector("form");
+const footer = document.querySelector("main footer");
+const description = document.getElementById("description");
 
 // Cotação das moedas
 const USD = 4.87;
@@ -35,6 +37,19 @@ form.onsubmit = (event) => {
 
 // Função para converter a moeda
 function convertCurrency(amount, price, simbol) {
+
+    try {
+        description.textContent = `${simbol} 1 = ${price}`
+        footer.classList.add("show-result");
+        
+    } catch (error) {
+        //removendo o resultado caso haja erro 
+        footer.classList.add("show-result");
+
+        //exibindo mensagem de erro 
+        console.log(error);
+        alert("Erro, tente novamente mais tarde!");
+    }
 
 }
 
