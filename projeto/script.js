@@ -4,6 +4,7 @@ const currency = document.getElementById("currency");
 const form = document.querySelector("form");
 const footer = document.querySelector("main footer");
 const description = document.getElementById("description");
+const result = document.getElementById("result");
 
 // Cotação das moedas
 const USD = 4.87;
@@ -44,6 +45,18 @@ function convertCurrency(amount, price, simbol) {
 
         //aplica a classe que exbibe o total convertido
         footer.classList.add("show-result");
+
+        //realizando o calculo e convertendo o valor total
+        let total = amount * price;
+
+        //condição para verificar se o numero digitado não é um numero
+        if(isNaN(total)){
+            return alert("Por favor! Digite o valor corretamente para converter")
+        }
+
+        //formatando o valor total
+        total = formatCurrencyBRL(total).replace("R$", "");
+        result.textContent = `${total} Reais`;
         
     } catch (error) {
         //removendo o resultado caso haja erro 
@@ -57,7 +70,7 @@ function convertCurrency(amount, price, simbol) {
 
 //função para formatar a moeda em real brasileiro
 function formatCurrencyBRL(value){
-    
+
     //convert para numero para utilizar o tolocale string para formatar no padrão BRL
     return Number(value).toLocaleString("pt-BR",{
         style: "currency",
