@@ -1,5 +1,4 @@
-Neste projeto eu estou aplicando meus conhecimentos adquiridos no curso de desenvolvimento Full Stack da @Rocketseat. Esse projeto é um sistema basico web para
-converter o valor de 3 moedas diferentes (dolar, libra e euro) para reais(BRL). 
+Este projeto trata-se de um sistema web básico para converter o valor de três moedas diferentes (dólar, libra e euro) para reais (BRL).
+Meu foco principal foi no desenvolvimento do JavaScript, onde criei interações manipulando o DOM e exibindo informações sobre as moedas convertidas.
 
-Meu foco neste projeto foi desenvolver o javascript do projeto, aonde eu criei interações manipuando o DOM exibindo informações da moeda convertida.
-Através deste projeto consiguir desenvolver habilidades de manipalação do documento, criação de funções, criação de eventos e logica de programação!
+Através deste projeto, consegui desenvolver habilidades de manipulação do documento, criação de funções, implementação de eventos e lógica de programação.
